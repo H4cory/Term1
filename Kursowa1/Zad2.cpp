@@ -23,6 +23,9 @@ int main(){
         Output = Sum/Counter;
         cout<<"Sredno aritmetichnoto na chislata e: "<<Output<<endl;
     }
+    else{
+        cout<<"Nqma podhodqshti chisla"<<endl;
+    }
     system("Pause");
     return 0;
 }
