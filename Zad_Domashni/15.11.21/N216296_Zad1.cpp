@@ -9,13 +9,13 @@ int main(){
     int MyArr[100][100], n=0,m=0, EqArr[100],Eq = 0,br=0;
     bool AllEq= true;
 
-    cout<<"Wywedete N reda i M koloni: "; cin >> m >> n;
+    cout<<"Wywedete N reda i M koloni: "; cin >> n >> m;
 
     for(int i = 0;i< n;i++ ){
         cout<<endl;
         for(int f=0;f<m;f++){
-            cout<<"Wywedete Arr["<<f+1<<"]["<<i+1<<"]: ";
-            cin>>MyArr[f][i];
+            cout<<"Wywedete Arr["<<i+1<<"]["<<f+1<<"]: ";
+            cin>>MyArr[i][f];
 
         }
 
@@ -25,7 +25,7 @@ int main(){
         Eq= MyArr[1][i];
 
         for(int f=0;f<m;f++){
-            if(Eq!=MyArr[f][i]){
+            if(Eq!=MyArr[i][f]){
                 AllEq=false;
             }
         }
@@ -40,7 +40,7 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<i+1<<". | ";
         for(int f=0;f<m;f++){
-            cout <<MyArr[f][i]<<' ';          
+            cout <<MyArr[i][f]<<' ';          
         }
         cout<<" | ";
         cout<<endl;
