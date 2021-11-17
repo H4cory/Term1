@@ -4,25 +4,23 @@ ot a, koito sa kratni na 3 i zavarshvat na 1, 3, 5, 7.
 */
 
 #include <iostream>
-
 using namespace std;
-
 int main(){
-
-    long int a, Holder , LastDigit;
-
-    cout<<"Wywedete a:";
+    long int a, Sum = 0 , LastDigit, Counter = 0;
+    double Output;
+    cout<<"Wywedete a: ";
     cin>>a;
-
-    for(long int i = 1; i < a ; i++ ){
-        if(i %3 == 0){
+    for(long int i = 0; i < a ; i++ ){
+        if(i % 3 == 0){
             LastDigit= i % 10;
             if(LastDigit == 1 ||LastDigit == 3 ||LastDigit == 5 || LastDigit == 7 ){
-                cout<<i<<" - e kratno na 3 i poslednata cifra e 1,3,5 ili 7 \n";
+                Sum = Sum + i;
+                Counter ++;
             }
         }
     }
-
-    //system("Pause");
+    Output = Sum/Counter;
+    cout<<"Sredno aritmetichnoto na chislata e: "<<Output<<endl;
+    system("Pause");
     return 0;
 }
