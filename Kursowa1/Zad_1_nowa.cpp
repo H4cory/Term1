@@ -76,8 +76,10 @@ int main(){
                     }
                     Counter++;
                 }
-                cout<<" | ";
+               
+                cout<<"|";
                 cout<<endl;
+                
             }   
         }
         SkipVis = false;
