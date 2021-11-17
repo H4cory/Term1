@@ -19,8 +19,10 @@ int main(){
             }
         }
     }
-    Output = Sum/Counter;
-    cout<<"Sredno aritmetichnoto na chislata e: "<<Output<<endl;
+    if(Counter != 0){
+        Output = Sum/Counter;
+        cout<<"Sredno aritmetichnoto na chislata e: "<<Output<<endl;
+    }
     system("Pause");
     return 0;
 }
