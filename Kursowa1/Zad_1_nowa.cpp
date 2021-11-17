@@ -84,7 +84,7 @@ int main(){
 
         //Whod + SkipInput pri greshen whod
         if(!(SkipInput)){
-            cout<<"\nWywedete koi buton iskate da izberete: ";
+            cout<<"\nWywedete na koi button iskate da plyznete prysta si: ";
             Recovery = Input;
             cin>>SaveInput;
             Input = SaveInput[0] - 48;
