@@ -1,0 +1,8 @@
+
+1) input >> Usera (nqkwi simwuli [1/neopredeln broi] )
+2) programata << wzema inputa i prowerq wseki simwul kakyw e (For cikyl s strlen())
+3) prowerqwa dali ima specialni simwuli (./*/+/x/^)
+4) dobawq kym izhoda(SUM) + (Syotwetniq simwul) // Iput(.) >> Sum + 1 @ Input(^) >> Sum + 2 
+5) outup<< SUM 
+
+// strlen(input) = siwulite w chara "input"
