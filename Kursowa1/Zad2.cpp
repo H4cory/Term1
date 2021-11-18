@@ -10,7 +10,7 @@ int main(){
     double Output;
     cout<<"Wywedete a: ";
     cin>>a;
-    for(long int i = 0; i < a ; i++ ){
+    for(long int i = 0; i <= a ; i++ ){
         if(i % 3 == 0){
             LastDigit= i % 10;
             if(LastDigit == 1 ||LastDigit == 3 ||LastDigit == 5 || LastDigit == 7 ){
