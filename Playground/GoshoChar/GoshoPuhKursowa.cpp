@@ -24,7 +24,7 @@ int main(){
     int br=0, sum=0;
     bool SpellCheck = false;
 
-    cout<<"Wywedete kolko Piti Izlapahte dnes wie debeli swine: "; 
+    cout<<"Wywedete kolko Piti Izlapahte dnes: "; 
     cin >>Input;
     br = strlen(Input);
 
@@ -53,10 +53,10 @@ int main(){
     }
 
     if(sum!=0){
-        cout<<endl<<"Wie ste inskusumirali| "<<sum<<" |broq piti ugoeni praseta takiwa, oink, oink!"<<endl;
+        cout<<endl<<"Wie ste inskusumirali| "<<sum<<" |broq piti!"<<endl;
     }
     else{
-        cout<<endl<<"Prasencata mai ne sa qli dnes?"<<endl;
+        cout<<endl<<"Ne ste consumirali piti ?"<<endl;
     }
     
     if(SpellCheck){ 
