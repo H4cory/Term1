@@ -20,7 +20,7 @@ using namespace std;
 int main(){
 
     float KvaPo, KvaDi, r, x[100], y[100];
-    int M, N, UcIz = 0, BrIz=0, BrUcIz[100] ;
+    int M, N, UcIz = 0,NeUcIz = 0, BrIz=0, BrUcIz[100] ;
     bool loop = true;
 
     cout<<"Wywedete a: ";
@@ -33,7 +33,7 @@ int main(){
     cout<<"Wywedete Min broi istreli (M): ";
     cin>>M;
 
-    cout<<"Wywedete Min broi iceleni iztreli (N): ";
+    cout<<"Wywedete Min broi uceleni iztreli (N): ";
     cin>>N;
 
     
@@ -44,14 +44,24 @@ int main(){
         cout<<"Wywedete y: "; 
         cin>>y[BrIz];
 
-        
+        if(r>= sqrt(pow(x[BrIz],2)+pow(y[BrIz],2))){
 
-        if( (y[BrIz] <= -x[BrIz]) && r>= sqrt(pow(x[BrIz],2)+pow(y[BrIz],2)) ){
-            if(x[BrIz]<= -KvaPo || y[BrIz]<= -KvaPo){
-                cout<<"Popadenie! \n";
-                BrUcIz[UcIz] = BrIz; 
-                UcIz++;
-            }
+                if( (y[BrIz] <= -x[BrIz]) ){
+                    if(x[BrIz]<= -KvaPo || y[BrIz]<= -KvaPo){
+                        cout<<"Popadenie w zashtrihowanta! \n";
+                    // BrUcIz[UcIz] = BrIz; 
+                        UcIz++;
+                    }
+                }
+                if(!((y[BrIz] <= -x[BrIz])) || !(x[BrIz]<= -KvaPo || y[BrIz]<= -KvaPo)){
+                        cout<<"Popadenie w NE-zashtrihowanta! \n";
+                        BrUcIz[NeUcIz] = BrIz;
+                        NeUcIz++; 
+                }
+
+        }
+        else{
+            cout<<"Ne e wytre w kryga! \n";
         }
         BrIz++;
         cout<<endl;
@@ -63,7 +73,7 @@ int main(){
 
     cout<<"Popadeniqta sa: \n";
 
-    for(int i = 0;i < UcIz ;i++){
+    for(int i = 0;i < NeUcIz ;i++){
         cout<<"x: "<<x[BrUcIz[i]]<<" y: "<<y[BrUcIz[i]]<<endl;
     }
 

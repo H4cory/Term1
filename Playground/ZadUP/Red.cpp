@@ -7,11 +7,41 @@ rezultatat tryabva da bade 3, zashtoto ima poreditsa ot tri posledovatelni ravni
 i tova e nay-dalgata poreditsa ot ravni chisla.
 */
 #include <iostream>
+#include <cstring>
+#include <string>
 using namespace std;
 
 int main(){
 
-    int ;
+    char input[100] ;
+    int combo=0, newCombo =0 , holder = 11;
+
+    cout<<"Wywedete chislata: ";
+    cin.getline(input,sizeof(input));
+
+    for(int i = 0; i < strlen(input); i++ ){
+
+        if(47 < input[i] && input[i] < 58 ){
+            if(input[i]- 48 == holder){
+                combo++;
+            }
+            else if(input[i] - 48 != holder){
+                combo = 0;
+            }
+            holder = input[i] - 48;
+        }
+        if(combo>newCombo){
+            newCombo = combo;
+        }
+        
+    } 
+    if(newCombo == 0){
+        cout<<"Nqma";
+    }
+    else{
+        cout<<"Nai dylgo posledowatelna redica e ot: "<<newCombo+1<<" cifri !";
+        }
+
 
 
 
