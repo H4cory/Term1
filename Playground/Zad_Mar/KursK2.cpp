@@ -5,6 +5,8 @@ koyato namira i izvezhda na ekrana broyat na chislata v nay-dalgata poreditsa ot
 posledovatelni ravni chisla. Naprimer, ako vavedenite chisla sa (4, 5, 5, 6, 6, 6, 8, 0),
 rezultatat tryabva da bade 3, zashtoto ima poreditsa ot tri posledovatelni ravni chisla (6, 6, 6) 
 i tova e nay-dalgata poreditsa ot ravni chisla.
+
+TODO - ne raboti s dwu/tricifreni
 */
 #include <iostream>
 #include <cstring>

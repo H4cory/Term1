@@ -8,3 +8,5 @@ Referat po informatika, 16 tema (do 14 sedmica?) kraq na semestyra ? Машин�
 
 --------------------------------IMAGIN_AKO_GO_BQH_NAPRAWIL------------------------------
 NAPRAWI PROGRAMA CONVERTIRASHAT KIRILICA NA SHLIOKAVICA
+
+positive calcolator
