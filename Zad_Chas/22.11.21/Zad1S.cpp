@@ -10,7 +10,7 @@ using namespace std;
 
 int maxSurface(int m, int a[], int b[])
 {
-    int maxSur = 0, br = 0;
+    float maxSur = 0, br = 0;
     for (int i = 0; i < m; i++)
     {
         if ((a[i] * b[i]) / 2 > maxSur)

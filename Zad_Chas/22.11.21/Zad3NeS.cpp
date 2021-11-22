@@ -19,11 +19,6 @@ void sorter(int br, int arr[])
                 arr[j + 1] = t;
             }
 
-    cout<<"\nPo golemina: ";
-    for (int i = 0; i < br; i++)
-    {
-        cout << arr[i] <<' ';
-    }
 }
 
 int main()
@@ -41,6 +36,12 @@ int main()
     }
 
     sorter(br, arr);
+
+    cout<<"\nPo golemina: ";
+    for (int i = 0; i < br; i++)
+    {
+        cout << arr[i] <<' ';
+    }
 
     return 0;
 }
