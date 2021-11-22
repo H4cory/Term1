@@ -6,6 +6,9 @@ n stalba po pokazaniya nachin.
     11 16 15 6
     10 9  8  7
  
+
+ Neraboti/ zapochni na nowow ?
+ 
 */
 
 #include <iostream>
@@ -13,7 +16,7 @@ using namespace std;
 
 int main(){
 
- int myArr[100][100],red = 0, kol = 0, counter = 2, offset = 0  ;
+ int myArr[100][100],red = 0, kol = 0, counter = 2, offsetKol = 0, offsetRed = 0  ;
  bool loop = true;
 
  
@@ -23,29 +26,62 @@ int main(){
  
 
  //input na masiwa
+ myArr[0][0] = 1 ; 
  while(loop){
-    myArr[0][0] = 1 ; 
-    for(int i = 1;i < kol - offset ;i++){
-        myArr[offset][i] = counter;
+     //PYRWI
+    for(int i = 1;i < kol - offsetKol ;i++){
+        myArr[offsetKol][i] = counter;
         counter++;
+        if(counter == red*kol +1){
+        loop = false;
+        break;
+        } 
     }
-    offset++;
-    if(counter == red*kol +1){
-     loop = false;
-     break;
-    } 
-    for(int i =1; i< red ; i++){
-        myArr[i][kol-offset] = counter;
+    if(!loop){
+        break;
+    }
+     offsetKol++;
+    //WTORI
+    for(int i =1; i< red - offsetRed ; i++){
+        myArr[i + offsetKol -1][kol-offsetKol] = counter;
         counter++;
+        if(counter == red*kol +1){
+        loop = false;
+        break;
+        } 
     }
-    for(int i = kol - 1 - offset ; i > -1 ; i--){
-        myArr[red-offset][i] = counter;
+    if(!loop){
+        break;
+    }
+    offsetRed++;
+
+   //TRETI
+    for(int i = kol - 1 - offsetKol ; i > offsetKol -1 ; i--){
+        myArr[red -1][i] = counter;
         counter++;
+        if(counter == red*kol +1){
+        loop = false;
+        break;
+        } 
     }
-    for(int i = red- 1 - offset ;i > offset -1;i--){
-        myArr[i][0] = counter;
+    if(!loop){
+        break;
+    }
+    offsetKol++;
+
+    //CHETWYRTI
+    for(int i = red- 1 - offsetRed ;i > offsetRed -1;i--){
+        myArr[i][-1 + offsetRed] = counter;
         counter++;
+        if(counter == red*kol +1){
+        loop = false;
+        break;
+        } 
     }
+    if(!loop){
+        break;
+    }
+    offsetRed++;
   }
 
  //wizualizaciq na masiwa

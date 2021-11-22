@@ -47,6 +47,6 @@ int main(){
     i=0;
     avg2 = avg(A, i + n/2, n);
 
-    cout<<"Razlicata mejdu pyrwata i wtorata polowina e: "<<avg1 - avg2;
+    cout<<"Razlicata mejdu pyrwata i wtorata polowina e: "<<avg1 - avg2<<endl;
     return 0;
 }
