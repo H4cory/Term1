@@ -17,7 +17,7 @@ void takeInput(int* red, int* kol){
 }
 
 void fillArr(int* red, int* kol, int block[100][100]){
-    int counter = 0, Red, Kol, offsetRed =0, offsetKol =0, maxCounter =0;
+    int counter = 0, Red, Kol, offset =0, maxCounter =0;
     bool loop = true;
     Red = *red;
     Kol = *kol;
@@ -26,8 +26,8 @@ void fillArr(int* red, int* kol, int block[100][100]){
     while(loop){
 
     //Pyrwi
-    for(int i = 0 + offsetRed;i < Kol - offsetRed ; i++){
-     block[offsetRed][i] = ++counter;
+    for(int i = 0 + offset;i < Kol - offset ; i++){
+     block[offset][i] = ++counter;
      if(maxCounter == counter){
          loop = false;
          break;
@@ -36,10 +36,9 @@ void fillArr(int* red, int* kol, int block[100][100]){
     if(!loop){
         break;
     }
-
     //Wtori
-    for(int i = 1 + offsetKol;i < Red - offsetKol; i++){
-     block[i][Kol-1-offsetKol] = ++counter;
+    for(int i = 1 + offset;i < Red - offset; i++){
+     block[i][Kol-1-offset] = ++counter;
       if(maxCounter == counter){
          loop = false;
          break;
@@ -48,11 +47,9 @@ void fillArr(int* red, int* kol, int block[100][100]){
     if(!loop){
         break;
     }
-
-
     //Treti
-    for(int i = Kol-2 - offsetRed ;i != -1 + offsetRed;i--){
-     block[Red-1-offsetRed][i] = ++counter; 
+    for(int i = Kol-2 - offset ;i != -1 + offset;i--){
+     block[Red-1-offset][i] = ++counter; 
       if(maxCounter == counter){
          loop = false;
          break;
@@ -61,12 +58,9 @@ void fillArr(int* red, int* kol, int block[100][100]){
     if(!loop){
         break;
     }
-    offsetRed++;
-
-
     //Chetwyrti
-    for(int i = Red -2- offsetKol;i != 0 + offsetKol ; i--){
-     block[i][offsetKol] = ++counter;
+    for(int i = Red -2- offset;i != 0 + offset ; i--){
+     block[i][offset] = ++counter;
       if(maxCounter == counter){
          loop = false;
          break;
@@ -75,10 +69,7 @@ void fillArr(int* red, int* kol, int block[100][100]){
     if(!loop){
         break;
     }
-    offsetKol++;
-  
-
-
+    offset++;
     }   
 }
 
