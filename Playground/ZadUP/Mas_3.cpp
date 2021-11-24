@@ -6,6 +6,7 @@ n stalba po pokazaniya nachin.
     11 16 15 6
     10 9  8  7
  
+ Cwetowi gami
 */
 #include <iostream>
 using namespace std;
