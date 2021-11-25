@@ -74,6 +74,9 @@ void fillArr(int* red, int* kol, int block[100][100]){
 }
 
 void visArr(int* red, int* kol, int block[100][100]){
+ int max = 0;
+ max =*red * *kol;
+
  for(int i =0 ;i<*red; i++){
      cout<<"| ";
      for(int f = 0 ;f<*kol;f++){
