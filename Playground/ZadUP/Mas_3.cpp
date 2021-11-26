@@ -76,8 +76,29 @@ void fillArr(int* red, int* kol, int block[100][100]){
 void visArr(int* red, int* kol, int block[100][100]){
  int max = 0;
  max =*red * *kol;
-
+ 
+if(max <10){
  for(int i =0 ;i<*red; i++){
+     cout<<'|';
+     for(int f = 0 ;f<*kol;f++){
+         cout<<' '<<block[i][f];
+     }
+     cout<<" |"<<endl;
+ }
+
+}
+else if(max >= 10 && max<100){
+for(int i =0 ;i<*red; i++){
+     cout<<'|';
+     for(int f = 0 ;f<*kol;f++){
+         if(block[i][f]< 10) cout<<' '<<block[i][f]<<' ';
+         else cout<<' '<<block[i][f];
+     }
+     cout<<" |"<<endl;
+ }
+}
+else{
+    for(int i =0 ;i<*red; i++){
      cout<<"| ";
      for(int f = 0 ;f<*kol;f++){
          if(block[i][f]< 10) cout<<' '<<block[i][f]<<"  ";
@@ -87,10 +108,10 @@ void visArr(int* red, int* kol, int block[100][100]){
      cout<<'|'<<endl;
  }
 }
+}
 
 int main(){
  int block[100][100], red, kol;
- bool loop = true;
 
  takeInput(&red, &kol);
  fillArr(&red, &kol, block);
