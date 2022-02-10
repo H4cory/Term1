@@ -9,6 +9,5 @@ int main(){
 
 
 
-    //system("Pause");
-    return 0;
+ return 0;
 }
